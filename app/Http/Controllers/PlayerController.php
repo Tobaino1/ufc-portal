@@ -23,7 +23,7 @@ class PlayerController extends Controller
     public function requestPlayers()
       { 
         $players = Player::all();
-        return view ('players_request', ['players' => $players]); 
+        return view ('team', ['players' => $players]); 
       }
 
     /**

@@ -14,10 +14,10 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $players = Player::latest()->paginate(5);
+        $players = Player::latest()->paginate(10);
     
         return view('players.index',compact('players'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     public function requestPlayers()
